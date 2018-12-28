@@ -7,9 +7,9 @@ import { connect } from 'react-redux';
 const SortableList = SortableContainer((props) => {
   return (
     <div id="todoList">
-        {props.todos.map((item, index) => { // get todos from store
-          return (<Todo todo={item} index={index} key={item.id} />)
-        })}
+      {props.todos.map((item, index) => { // get todos from store
+        return (<Todo todo={item} index={index} key={item.id} />)
+      })}
     </div>
   )
 })
@@ -20,4 +20,4 @@ const mapStateToProps = (state) => {
   }
 }
 
-export default connect(mapStateToProps) (SortableList)
+export default connect(mapStateToProps)(SortableList)

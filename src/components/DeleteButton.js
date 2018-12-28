@@ -14,6 +14,5 @@ class DeleteButton extends Component {
     )
   }
 }
-
 // define a new action creator to pass to this component
 export default connect(null, {deleteTodo: deleteTodo}) (DeleteButton);

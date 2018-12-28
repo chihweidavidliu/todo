@@ -5,7 +5,6 @@ import { connect } from 'react-redux';
 import { addTodo } from '../actions';
 
 class FormInput extends React.Component {
-
   renderInput = (formProps) => {
     return (
       <div className="field">
