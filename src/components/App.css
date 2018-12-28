@@ -1,0 +1,52 @@
+body {
+  background-image: url("../images/background.jpg");
+  color: white;
+}
+
+#main {
+  margin-top: 30px;
+  max-width: 700px !important;
+}
+
+.deleteButton {
+  transition: all 1s;
+}
+.deleteButton:hover {
+  transform: scale(1.2);
+}
+
+#todoList {
+  margin-top: 20px;
+}
+.item {
+  font-size: 17px;
+  border-radius: 5px !important;
+  display: flex;
+  justify-content: space-between;
+  padding: 7px;
+}
+.item:hover {
+  transform: scale(1.01);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.19), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.item:focus {
+  outline: 0;
+}
+
+.triangle {
+  float: left;
+}
+
+.header {
+  float: left;
+}
+.list:focus {
+  outline: 0;
+}
+
+button {
+  border: none;
+  background: none;
+  color: white;
+}
