@@ -26,8 +26,8 @@ export default (state = JSON.parse(localStorage.getItem("state")) || [], action)
       let id = shortid.generate();
       let todo = {id: id, todo: action.payload, done: false}
 
-      localStorage.setItem("state", JSON.stringify([ ...state, todo ])); // persist state of todos in local storage
-      return [ ...state, todo ];
+      localStorage.setItem("state", JSON.stringify([ todo, ...state ])); // persist state of todos in local storage
+      return [ todo, ...state ];
     case UPDATE_ORDER:
       let stateCopy = [...state]
       let { oldIndex, newIndex } = action.payload
