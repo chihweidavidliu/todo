@@ -18,7 +18,7 @@ class BottomBar extends React.Component {
     }
   }
   render() {
-    return <div className = "bottom-bar ui container">{this.renderMessage()}</div>
+    return <div className = "bottom-bar">{this.renderMessage()}</div>
   }
 }
 
