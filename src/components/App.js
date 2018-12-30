@@ -8,7 +8,11 @@ const App = (props) => {
   return (
     <div id="main" className="ui container">
       <h1>My To-Dos</h1>
-      <DeleteAll />
+
+      <div className="topbar">
+        <h3>Enter todo:</h3>
+        <DeleteAll />
+      </div>
       <FormInput />
       <TodoListContainer />
     </div>

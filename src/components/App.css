@@ -58,3 +58,14 @@ button {
 .trash {
   margin-left: 7px !important;
 }
+
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+h3 {
+  position: relative;
+  top: 5px;
+}
