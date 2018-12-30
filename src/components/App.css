@@ -1,5 +1,6 @@
 body {
   background-image: url("../images/background.jpg");
+  background-size: cover;
   color: white;
   overflow: hidden;
   text-shadow: 1px 1px 2px #000000;
@@ -98,11 +99,7 @@ h3 {
 }
 
 .bottom-bar {
-  /* background: none !important;
-  border: none !important;
-  position: absolute !important;
-  bottom: 20px;
-  font-size: 17px; */
+  font-size: 17px;
   text-align: center;
 
 }
