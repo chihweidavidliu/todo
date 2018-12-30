@@ -3,11 +3,22 @@ import { connect } from 'react-redux';
 
 class BottomBar extends React.Component {
 
-  render() {
+  renderMessage = () => {
     let count = this.props.todos.length;
-    return (
-      <div className="bottom-bar">Number of todos: {count}</div>
-    )
+
+    if(count === 0) {
+      return "You have no todos"
+    } else {
+      return (
+        <div>
+          <p>Number of todos: {count}</p>
+          <p>Click to Edit. Drag to reorder</p>
+        </div>
+      )
+    }
+  }
+  render() {
+    return <div className = "bottom-bar ui container">{this.renderMessage()}</div>
   }
 }
 
