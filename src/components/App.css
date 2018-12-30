@@ -54,3 +54,7 @@ button {
   background: none;
   color: white;
 }
+
+.trash {
+  margin-left: 7px !important;
+}

@@ -1,5 +1,5 @@
 import shortid from 'shortid';
-import { ADD_TODO, UPDATE_ORDER, DELETE_TODO } from '../actions/types';
+import { ADD_TODO, UPDATE_ORDER, DELETE_TODO, CLEAR_ALL } from '../actions/types';
 
 function arrayMove(arr, previousIndex, newIndex) {
   // make copy of original array
@@ -41,6 +41,9 @@ export default (state = JSON.parse(localStorage.getItem("state")) || [], action)
       let filteredState = state.filter(todo => todo.id !== idToDelete);
       localStorage.setItem("state", JSON.stringify(filteredState));
       return filteredState;
+      case CLEAR_ALL:
+        localStorage.removeItem("state");
+        return [];
     default:
       return state
     }
