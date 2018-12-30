@@ -1,4 +1,4 @@
-import { ADD_TODO, UPDATE_ORDER, DELETE_TODO, CLEAR_ALL } from './types';
+import { ADD_TODO, UPDATE_ORDER, DELETE_TODO, CLEAR_ALL, EDIT_TODO } from './types';
 
 export const addTodo = (todo) => {
   return {
@@ -24,5 +24,12 @@ export const deleteTodo = (id) => {
 export const clearAll = () => {
   return {
     type: CLEAR_ALL,
+  }
+}
+
+export const editTodo = (idToEdit, newText) => {
+  return {
+    type: EDIT_TODO,
+    payload: {idToEdit: idToEdit, newText: newText}
   }
 }

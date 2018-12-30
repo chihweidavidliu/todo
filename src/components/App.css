@@ -9,14 +9,30 @@ body {
   max-width: 700px !important;
 }
 
+
+
 .deleteButton {
-  transition: all 1s;
+  transition: all 0.5s;
 }
 .deleteButton:hover {
   transform: scale(1.2);
 }
+
+.edit {
+  transition: all 0.5s;
+}
 .edit:hover {
   transform: scale(1.07);
+}
+
+.edit:focus {
+  outline: 0;
+}
+
+
+/* Need to put transition on todo header to allow contentEditable functionality to not interfere with sortable funcitonality*/
+.header {
+  transition: all 0.5s;
 }
 
 #todoList {
