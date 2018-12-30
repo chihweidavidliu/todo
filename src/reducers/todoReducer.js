@@ -24,7 +24,7 @@ export default (state = JSON.parse(localStorage.getItem("state")) || [], action)
   switch(action.type) {
     case ADD_TODO:
       let id = shortid.generate();
-      let todo = {id: id, todo: action.payload, done: false}
+      let todo = {id: id, todo: action.payload, done: false, editable: false}
 
       localStorage.setItem("state", JSON.stringify([ todo, ...state ])); // persist state of todos in local storage
       return [ todo, ...state ];

@@ -1,5 +1,6 @@
 import React from 'react';
 import DeleteButton from './DeleteButton';
+import EditButton from './EditButton';
 import { SortableElement } from 'react-sortable-hoc';
 
 // define a component that is a sortable element using react-sortables SortableElement function
@@ -12,7 +13,10 @@ const Todo = SortableElement(props => {
         <i className="white right triangle icon"></i>
         <div className="header">{todo}</div>
       </div>
-      <DeleteButton id={id}/>
+      <div>
+        <EditButton />
+        <DeleteButton id={id}/>
+      </div>
     </div>
   )
 })
