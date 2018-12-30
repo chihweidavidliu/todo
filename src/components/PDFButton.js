@@ -13,6 +13,10 @@ class PDFButton extends React.Component {
       return todoObject
     }); // get text only from the todos
 
+    let today = new Date();
+    let time = today.toLocaleTimeString("en-UK");
+    let date = today.toLocaleDateString("en-UK")
+
     var docDefinition = {
       content: [
         { text: 'My Todos', style: "header" },
@@ -22,7 +26,7 @@ class PDFButton extends React.Component {
       footer: {
         columns: [
           { text: `Created with David Liu's Todo app 2018`, style: "footer" },
-          { text: 'Generated on', alignment: 'right', style: "footer" }
+          { text: `Generated on: ${date} at ${time}`, alignment: 'right', style: "footer" }
         ]
       },
 
