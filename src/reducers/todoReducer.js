@@ -36,7 +36,6 @@ export default (state = JSON.parse(localStorage.getItem("state")) || [], action)
       localStorage.setItem("state", JSON.stringify(newState)); // persist state of todos in local storage
       return newState;
     case DELETE_TODO:
-      console.log(action.payload)
       let idToDelete = action.payload;
       let filteredState = state.filter(todo => todo.id !== idToDelete);
       localStorage.setItem("state", JSON.stringify(filteredState));
