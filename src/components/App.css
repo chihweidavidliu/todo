@@ -103,9 +103,15 @@ h3 {
 .bottom-bar {
   font-size: 16px;
   text-align: center;
-
 }
 
+.transition {
+  transition: all 0.5s;
+}
+
+.scale {
+  transform: scale(1.1) !important;
+}
 .bottom-bar p {
   margin-bottom: 2px;
 }

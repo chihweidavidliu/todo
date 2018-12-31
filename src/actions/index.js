@@ -1,4 +1,4 @@
-import { ADD_TODO, UPDATE_ORDER, DELETE_TODO, CLEAR_ALL, EDIT_TODO } from './types';
+import { ADD_TODO, UPDATE_ORDER, DELETE_TODO, CLEAR_ALL, EDIT_TODO, TRIGGER_SCALE, REVERSE_SCALE } from './types';
 
 export const addTodo = (todo) => {
   return {
@@ -31,5 +31,17 @@ export const editTodo = (idToEdit, newText) => {
   return {
     type: EDIT_TODO,
     payload: {idToEdit: idToEdit, newText: newText}
+  }
+}
+
+export const triggerScale = () => {
+  return {
+    type: TRIGGER_SCALE
+  }
+}
+
+export const reverseScale = () => {
+  return {
+    type: REVERSE_SCALE
   }
 }

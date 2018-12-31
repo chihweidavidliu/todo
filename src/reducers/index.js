@@ -1,8 +1,10 @@
 import { combineReducers } from 'redux';
 import { reducer as formReducer } from 'redux-form';
 import todoReducer from './todoReducer';
+import scaleReducer from './scaleReducer';
 
 export default combineReducers({
   todos: todoReducer,
-  form: formReducer
+  form: formReducer,
+  scale: scaleReducer,
 })
