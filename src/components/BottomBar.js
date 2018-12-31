@@ -18,7 +18,12 @@ class BottomBar extends React.Component {
     }
 
     if(count === 0) {
-      return "You have no todos"
+      return <div
+        className={divClass}
+        onTransitionEnd={this.handleTransitionEnd}
+        >
+        <p>You have no todos</p>
+      </div>
     } else {
       return (
         <div
